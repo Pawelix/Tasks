@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="fixAge.js"></script>
+    <title></title>
+    <script>
+        function test() {
+            var min = 0;
+            var max = 100;
+            var makeARandomNumber = function () {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+            var randomInput = Array(10).fill(0).map(makeARandomNumber);
+            
+            console.log('randomInput: ', randomInput);
+
+            var result = fixage(randomInput);
+
+            console.log('result: ', result);
+            alert(result);
+        }
+    </script>
+</head>
+
+<body>
+
+    <button type="button" onclick="test()">test fixage function </button>
+    
+</body>
+</html>
